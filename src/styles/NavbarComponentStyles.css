@@ -1,0 +1,50 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 13vh;
+}
+
+.container-new {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}
+
+#other-links {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.link-container {
+  text-align: center;
+  width: 15%;
+  height: 100%;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  font-size: larger;
+  color: black;
+  font-weight: bold;
+  transform: translateY(0px);
+  padding: 1rem 0;
+  transition: transform ease 0.3s;
+}
+
+.nav-link:hover {
+  color: rgb(255, 0, 0);
+  border-bottom: 5px solid rgb(255, 123, 0);
+  transform: translateY(-10px);
+  transition: transform ease 0.3s;
+}
+
+.nav-link-active {
+  color: rgb(0, 26, 255);
+  border-bottom: 5px solid red;
+}
