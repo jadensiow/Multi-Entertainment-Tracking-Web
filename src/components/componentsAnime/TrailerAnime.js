@@ -44,7 +44,11 @@ export const TrailerAnime = (props) => {
         src={`https://www.youtube.com/embed/${results}?rel=0`}
         frameborder="0"
         allow="encrypted-media"
-        allowfullscreen
+        allowfullscreen="allowfullscreen"
+        mozallowfullscreen="mozallowfullscreen"
+        msallowfullscreen="msallowfullscreen"
+        oallowfullscreen="oallowfullscreen"
+        webkitallowfullscreen="webkitallowfullscreen"
       ></iframe>
     </div>
   );
