@@ -21,11 +21,9 @@ export const AddTvSeries = () => {
       const searchUrl = `https://api.themoviedb.org/3/search/tv?api_key=${REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${search}`;
       axios.get(searchUrl).then((res) => {
         if (res.data.results.length !== 0) {
-          console.log("searching");
-          console.log(res.data.results);
+          // console.log(res.data.results);
           setResults(res.data.results);
         } else {
-          console.log("error");
           setResults([]);
         }
       });

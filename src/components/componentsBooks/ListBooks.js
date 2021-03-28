@@ -5,7 +5,7 @@ import EpisodeNumberUpdater from "../EpisodeNumberUpdater";
 import ButtonsBooks from "./ButtonsBooks";
 
 const ListBooks = ({ listBooks, type }) => {
-  console.log(listBooks);
+  //console.log(listBooks);
   const [search, setSearch] = useState("");
 
   return (

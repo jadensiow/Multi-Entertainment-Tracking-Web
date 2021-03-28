@@ -107,7 +107,7 @@ const AppAnimeReducer = (state, action) => {
         }
         return anime;
       });
-      console.log(newList);
+      // console.log(newList);
       if (listType === "watching") {
         return {
           ...state,

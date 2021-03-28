@@ -5,7 +5,7 @@ import EpisodeNumberUpdater from "../EpisodeNumberUpdater";
 import CardComponent from "../CardComponent";
 
 const ListAnime = ({ listAnime, type }) => {
-  console.log(listAnime);
+  //console.log(listAnime);
 
   const [search, setSearch] = useState("");
 

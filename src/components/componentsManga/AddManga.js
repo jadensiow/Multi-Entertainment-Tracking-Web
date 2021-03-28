@@ -12,7 +12,7 @@ export const AddManga = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.title.value;
-    console.log(name);
+    // console.log(name);
     setSearch(name);
   };
 
@@ -24,8 +24,7 @@ export const AddManga = () => {
       const searchUrl = `https://api.jikan.moe/v3/search/manga?q=${search}&order_by=title&sort=asc&limit=20&rated=g,pg13,pg,r17,r&type=manga,manhwa,oneshot`;
       axios.get(searchUrl).then((res) => {
         if (res.data.results.length !== 0) {
-          console.log("searching");
-          console.log(res.data.results);
+          // console.log(res.data.results);
           setResults(res.data.results);
         } else {
           console.log("error");

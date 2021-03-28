@@ -27,7 +27,6 @@ export const AddMovies = () => {
           //console.log(res.data.results);
           setResults(res.data.results);
         } else {
-          console.log("error");
           setResults([]);
         }
       });

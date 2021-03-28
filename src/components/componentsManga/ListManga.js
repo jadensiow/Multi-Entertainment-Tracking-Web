@@ -6,7 +6,7 @@ import React, { useState } from "react";
 const ListManga = ({ listManga, type }) => {
   const [search, setSearch] = useState("");
 
-  console.log(listManga);
+  //console.log(listManga);
   return (
     <div className="mt-4 ml-3">
       <h1 className="Title_Text">Watch List</h1>

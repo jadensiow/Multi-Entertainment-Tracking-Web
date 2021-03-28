@@ -22,11 +22,11 @@ export const AddBooks = () => {
       const searchUrl = `https://www.googleapis.com/books/v1/volumes?q=${search}`;
       axios.get(searchUrl).then((res) => {
         if (res.data !== 0) {
-          console.log("searching");
-          console.log(res.data.items);
+          //  console.log("searching");
+          // console.log(res.data.items);
           setResults(res.data.items);
         } else {
-          console.log("error");
+          // console.log("error");
           setResults([]);
         }
       });

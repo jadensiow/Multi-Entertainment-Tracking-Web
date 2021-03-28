@@ -16,8 +16,7 @@ export const TrailerMovie = (props) => {
     {
       const searchUrl = `https://www.googleapis.com/youtube/v3/search?q=${search} ${yearOfrelease} trailer&part=snippet&type=video&pageInfo.resultsPerPage=2&videoEmbeddable=true&key=${REACT_APP_YOUTUBE_KEY}`;
       axios.get(searchUrl).then((res) => {
-        console.log("searching");
-        console.log(res.data.items[0].id.videoId);
+        //console.log(res.data.items[0].id.videoId);
         setResults(res.data.items[0].id.videoId);
       });
     }

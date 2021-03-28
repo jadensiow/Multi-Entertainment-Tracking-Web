@@ -12,7 +12,7 @@ export const AddAnime = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.title.value;
-    console.log(name);
+    // console.log(name);
     setSearch(name);
   };
 

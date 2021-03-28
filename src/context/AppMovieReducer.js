@@ -51,7 +51,7 @@ const AppMovieReducer = (state, action) => {
         return movie;
       });
 
-      console.log(newList);
+      //console.log(newList);
 
       if (listType === "watching") {
         return {

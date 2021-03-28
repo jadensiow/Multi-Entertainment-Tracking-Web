@@ -32,7 +32,7 @@ export const TvNumSeasonNEps = (props) => {
     {
       const searchUrl = `https://api.themoviedb.org/3/tv/${props.tvseries.id}?api_key=${apiKey}&language=en-US`;
       axios.get(searchUrl).then((res) => {
-        console.log(res);
+        // console.log(res);
 
         if (res.data !== 0) {
           setResults(res.data);
@@ -45,7 +45,7 @@ export const TvNumSeasonNEps = (props) => {
   }, []);
 
   let tvseries = results;
-  console.log(tvseries);
+  // console.log(tvseries);
   return (
     <CardComponent
       tvseries

@@ -4,7 +4,7 @@ import { TvNumSeasonNEps } from "./TvNumSeasonNEps";
 
 export const ResultCardTvSeries = (props) => {
   //console.log(props.tvseries.id);
-  console.log(props);
+  // console.log(props);
 
   return (
     <div className="result-card">
