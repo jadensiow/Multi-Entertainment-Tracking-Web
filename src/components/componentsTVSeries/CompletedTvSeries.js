@@ -6,10 +6,11 @@ const CompletedTvSeries = ({ listTvSeries, type }) => {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Completed List</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="tvseriestitle">Completed List</h1>
       <input
-        className="mt-4"
+        className="mt-5"
+        placeholder="Search"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
@@ -34,6 +35,11 @@ const CompletedTvSeries = ({ listTvSeries, type }) => {
                 }
                 listType="completed"
                 userRating={tvseries.userRating ? tvseries.userRating : 0}
+                MovieTVbackground_url={
+                  tvseries.backdrop_path !== null
+                    ? `https://image.tmdb.org/t/p/w780${tvseries.backdrop_path}`
+                    : null
+                }
               >
                 <div style={{ marginLeft: "2rem" }}>
                   <ButtonsTvSeries tvseries={tvseries} type={type} />

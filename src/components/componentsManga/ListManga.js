@@ -8,10 +8,11 @@ const ListManga = ({ listManga, type }) => {
 
   //console.log(listManga);
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Watch List</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="mangatitle">Watch List</h1>
       <input
-        className="mt-4"
+        className="mt-5"
+        placeholder="Search"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
@@ -34,11 +35,14 @@ const ListManga = ({ listManga, type }) => {
                 comment={manga.comment ? manga.comment : "No comment available"}
                 listType="watching"
                 userRating={manga.userRating ? manga.userRating : 0}
+                animeManga_url={manga.image2_url ? manga.image2_url : null}
               >
                 <div style={{ paddingLeft: "2rem" }}>
                   <EpisodeNumberUpdater
                     id={manga.mal_id}
-                    totalEpisodes={manga.chapters}
+                    totalEpisodes={
+                      manga.chapters > 0 ? manga.chapters : "Ongoing"
+                    }
                     onEpisodeNumber={
                       manga["episodesWatched"] ? manga["episodesWatched"] : 0
                     }

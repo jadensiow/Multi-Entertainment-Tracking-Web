@@ -51,12 +51,7 @@ function AppManga({ match }) {
     return component;
   };
 
-  return (
-    <div>
-      <HeaderManga />
-      {componentToRender()}
-    </div>
-  );
+  return <div>{componentToRender()}</div>;
 }
 
 export default AppManga;

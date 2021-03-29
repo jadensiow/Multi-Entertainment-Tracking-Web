@@ -1,18 +1,22 @@
 import CardComponent from "../CardComponent";
 import EpisodeNumberUpdater from "../EpisodeNumberUpdater";
 import { ButtonsTvSeries } from "./ButtonsTvSeries";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export const ListTvSeries = ({ listTvSeries, type }) => {
   const [search, setSearch] = useState("");
 
-  //  console.log(listTvSeries);
+  const [result, setResults] = useState("");
+
+  console.log(listTvSeries);
 
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Watch List</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="tvseriestitle">Watch List</h1>
       <input
-        className="mt-4"
+        className="mt-5"
+        placeholder="Search"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
@@ -47,6 +51,11 @@ export const ListTvSeries = ({ listTvSeries, type }) => {
                 }
                 listType="watching"
                 userRating={tvseries.userRating ? tvseries.userRating : 0}
+                MovieTVbackground_url={
+                  tvseries.backdrop_path !== null
+                    ? `https://image.tmdb.org/t/p/w780${tvseries.backdrop_path}`
+                    : null
+                }
               >
                 <div style={{ marginLeft: "2rem" }}>
                   <EpisodeNumberUpdater

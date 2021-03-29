@@ -10,7 +10,7 @@ export const AddBooks = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.title.value;
-    console.log(name);
+    //  console.log(name);
     setSearch(name);
   };
 
@@ -34,11 +34,11 @@ export const AddBooks = () => {
   }, [search]);
   //  console.log(results);
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Search Books</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="bookstitle">Search Books</h1>
 
       <div className="inputBooks">
-        <form onSubmit={handleSubmit} className="form-inline mt-4">
+        <form onSubmit={handleSubmit} className="form-inline mt-5">
           <div class="form-group  mb-2">
             <input
               type="text"

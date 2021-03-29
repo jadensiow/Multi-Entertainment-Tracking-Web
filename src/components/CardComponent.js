@@ -27,6 +27,8 @@ const CardComponent = ({
   comment,
   listType,
   userRating,
+  MovieTVbackground_url,
+  animeManga_url,
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [commentState, setCommentState] = useState(comment);
@@ -49,6 +51,14 @@ const CardComponent = ({
   const { updateMovieComment, setMovieUserRating } = useContext(
     GlobalMovieContext
   );
+
+  let pgEpChap = "Episodes";
+
+  if (type === "book") {
+    pgEpChap = "Pages";
+  } else if (type === "manga") {
+    pgEpChap = "Chapters";
+  }
 
   const clickedOnStar = (starNumber) => {
     setClickedStar(starNumber);
@@ -117,7 +127,7 @@ const CardComponent = ({
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
       <div>
-        <div className="movie_card" id="bright">
+        <div className="movie_card">
           <div className="info_section">
             <div className="movie_header">
               <img className="locandina" src={image_url} />
@@ -134,7 +144,7 @@ const CardComponent = ({
               </h4>
               {!movie && (
                 <span className="minutes">
-                  {book ? "Pages:" : "Episodes:"} {"  "}
+                  {pgEpChap} {":  "}
                   {episodes
                     ? episodes
                     : episodes === 0
@@ -175,24 +185,55 @@ const CardComponent = ({
                   top: "1%",
                   right: "1%",
                 }}
-                className="btn btn-md btn-info ml-1000"
+                className="btn btn-lg btn-info ml-1000"
                 onClick={() => setIsFlipped(!isFlipped)}
               >
                 Flip
               </button>
             )}
           </div>
-          <div
-            className="blur_back"
-            style={{
-              backgroundImage: `url(${image_url})`,
-            }}
-          ></div>
+          {MovieTVbackground_url ? (
+            <div className="blur_back">
+              <img
+                src={MovieTVbackground_url}
+                style={{
+                  zIndex: 10,
+                  float: "right",
+                  width: "40%",
+                  height: "100%",
+                }}
+              />
+            </div>
+          ) : animeManga_url ? (
+            <div className="blur_back">
+              <img
+                src={animeManga_url}
+                style={{
+                  zIndex: 10,
+                  float: "right",
+                  width: "40%",
+                  height: "100%",
+                }}
+              />
+            </div>
+          ) : (
+            <div className="blur_back">
+              <img
+                src={image_url}
+                style={{
+                  zIndex: 10,
+                  float: "right",
+                  width: "40%",
+                  height: "95%",
+                }}
+              />
+            </div>
+          )}
         </div>
       </div>
 
       <div>
-        <div className="movie_card" id="bright">
+        <div className="movie_card">
           <div className="info_section">
             <div className="movie_header">
               <img className="locandina" src={image_url} />
@@ -276,7 +317,7 @@ const CardComponent = ({
                   top: "1%",
                   right: "1%",
                 }}
-                className="btn btn-md btn-info ml-0"
+                className="btn btn-lg btn-info ml-0"
                 id="btnFlip"
                 onClick={() => setIsFlipped(!isFlipped)}
               >
@@ -285,12 +326,43 @@ const CardComponent = ({
             )}
           </div>
 
-          <div
-            className="blur_back"
-            style={{
-              backgroundImage: `url(${image_url}) `,
-            }}
-          ></div>
+          {MovieTVbackground_url ? (
+            <div className="blur_back">
+              <img
+                src={MovieTVbackground_url}
+                style={{
+                  zIndex: 10,
+                  float: "right",
+                  width: "40%",
+                  height: "95%",
+                }}
+              />
+            </div>
+          ) : animeManga_url ? (
+            <div className="blur_back">
+              <img
+                src={animeManga_url}
+                style={{
+                  zIndex: 10,
+                  float: "right",
+                  width: "40%",
+                  height: "95%",
+                }}
+              />
+            </div>
+          ) : (
+            <div className="blur_back">
+              <img
+                src={image_url}
+                style={{
+                  zIndex: 10,
+                  float: "right",
+                  width: "40%",
+                  height: "95%",
+                }}
+              />
+            </div>
+          )}
         </div>
       </div>
     </ReactCardFlip>

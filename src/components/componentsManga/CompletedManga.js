@@ -6,10 +6,11 @@ const CompletedManga = ({ listManga, type }) => {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Completed List</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="mangatitle">Completed List</h1>
       <input
-        className="mt-4"
+        className="mt-5"
+        placeholder="Search"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
@@ -32,6 +33,7 @@ const CompletedManga = ({ listManga, type }) => {
                 comment={manga.comment ? manga.comment : "No comment available"}
                 listType="completed"
                 userRating={manga.userRating ? manga.userRating : 0}
+                animeManga_url={manga.image2_url ? manga.image2_url : null}
               >
                 <ButtonsManga manga={manga} type={type} />
               </CardComponent>

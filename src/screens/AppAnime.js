@@ -51,12 +51,7 @@ function AppAnime({ match }) {
     return component;
   };
 
-  return (
-    <div>
-      <HeaderAnime />
-      {componentToRender()}
-    </div>
-  );
+  return <div>{componentToRender()}</div>;
 }
 
 export default AppAnime;

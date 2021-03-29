@@ -4,7 +4,7 @@ import CardComponent from "../CardComponent";
 import { TrailerMovie } from "./TrailerMovie";
 
 export const ResultCardMovies = (props) => {
-  //console.log(props.movie.title);
+  console.log(props);
   // console.log("resultcard", props);
   const {
     addMovieToWatchList,
@@ -25,6 +25,7 @@ export const ResultCardMovies = (props) => {
   const [showTrailer, setShowTrailer] = useState(false);
 
   const { movie } = props;
+  //console.log(movie.backdrop_path);
 
   return (
     <CardComponent
@@ -35,6 +36,11 @@ export const ResultCardMovies = (props) => {
       start_date={movie.release_date}
       movie
       listType="add"
+      MovieTVbackground_url={
+        movie.backdrop_path !== null
+          ? `https://image.tmdb.org/t/p/w780${movie.backdrop_path}`
+          : null
+      }
     >
       <div style={{ marginLeft: "2rem" }}>
         <button

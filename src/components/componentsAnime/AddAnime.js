@@ -21,7 +21,7 @@ export const AddAnime = () => {
     if (search === "") {
       return null;
     } else {
-      const searchUrl = `https://api.jikan.moe/v3/search/anime?q=${search}&order_by=title&sort=asc&limit=20&rated=g,pg13,pg,r17,r&type=tv,ova,movie`;
+      const searchUrl = `https://api.jikan.moe/v3/search/anime?q=${search}&order_by=title&sort=asc&limit=10&rated=g,pg13,pg,r17,r&type=tv,ova,movie`;
       axios.get(searchUrl).then((res) => {
         if (res.data.results.length !== 0) {
           //   console.log("searching");
@@ -36,11 +36,11 @@ export const AddAnime = () => {
   }, [search]);
 
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Search Anime</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="animetitle">Search Anime</h1>
 
       <div className="inputAnime">
-        <form onSubmit={handleSubmit} className="form-inline mt-4">
+        <form onSubmit={handleSubmit} className="form-inline mt-5">
           <div class="form-group  mb-2">
             <input
               type="text"

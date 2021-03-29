@@ -50,12 +50,7 @@ function AppBooks({ match }) {
     return component;
   };
 
-  return (
-    <div>
-      <HeaderBooks />
-      {componentToRender()}
-    </div>
-  );
+  return <div>{componentToRender()}</div>;
 }
 
 export default AppBooks;

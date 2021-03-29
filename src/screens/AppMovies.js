@@ -50,12 +50,7 @@ const AppMovies = ({ match }) => {
     return component;
   };
 
-  return (
-    <div>
-      <HeaderMovies />
-      {componentToRender()}
-    </div>
-  );
+  return <div>{componentToRender()}</div>;
 };
 
 export default AppMovies;

@@ -28,7 +28,7 @@ export const ButtonsBooks = ({ books, type }) => {
     removeBooksfromCompleted(books.id);
   };
 
-  console.log(type);
+  // console.log(type);
   return (
     <div className="watchListBtn">
       {type === "watchlist" ? (

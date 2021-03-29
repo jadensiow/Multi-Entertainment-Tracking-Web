@@ -1,24 +1,38 @@
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  height: 13vh;
+  position: absolute;
+  left: 0px;
+  height: 10%;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  text-align: center;
 }
 
+.entertainment {
+  font-size: x-large;
+  font-weight: bold;
+}
 .container-new {
   width: 85%;
+  height: 10%;
   margin: 0 auto;
   padding: 0.5rem 0;
+  text-align: center;
 }
-
-#other-links {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: space-evenly;
+#navbar-inner {
+  color: rgb(116, 20, 20);
 }
-
+#navbar-inner2 {
+  color: rgb(141, 8, 8);
+}
+#navbar-inner3 {
+  color: rgb(192, 19, 19);
+}
+#navbar-inner4 {
+  color: rgb(238, 66, 66);
+}
+#navbar-inner5 {
+  color: rgb(241, 92, 92);
+}
 .link-container {
   text-align: center;
   width: 15%;
@@ -29,11 +43,10 @@ nav {
   display: block;
   text-decoration: none;
   width: 100%;
-  font-size: larger;
+  font-size: large;
   color: black;
   font-weight: bold;
-  transform: translateY(0px);
-  padding: 1rem 0;
+  transform: translateY(-1px);
   transition: transform ease 0.3s;
 }
 

@@ -53,12 +53,7 @@ const AppTvSeries = ({ match }) => {
     return component;
   };
 
-  return (
-    <div>
-      <HeaderTvSeries />
-      {componentToRender()}
-    </div>
-  );
+  return <div>{componentToRender()}</div>;
 };
 
 export default AppTvSeries;

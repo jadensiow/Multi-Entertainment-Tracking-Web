@@ -1,5 +1,3 @@
-import React, { useContext, useState } from "react";
-
 import { TvNumSeasonNEps } from "./TvNumSeasonNEps";
 
 export const ResultCardTvSeries = (props) => {

@@ -70,3 +70,45 @@ li {
     background-position: 100%;
   }
 }
+.animetitle {
+  color: #7c795d;
+  font-family: "Trocchi", serif;
+  font-size: 42px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0;
+}
+.movietitle {
+  color: #ec4b2e;
+  font-family: "Lato", sans-serif;
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0;
+}
+.tvseriestitle {
+  color: #f90b6d;
+  font-size: 38px;
+  font-family: "Signika", sans-serif;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0;
+}
+
+.mangatitle {
+  color: #e91fc7;
+  font-family: "Open Sans", sans-serif;
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0;
+}
+
+.bookstitle {
+  color: #5e0303;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0;
+}

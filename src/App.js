@@ -14,6 +14,7 @@ import { GlobalMangaProvider } from "./context/GlobalMangaState";
 import { GlobalTvSeriesProvider } from "./context/GlobalTvSeriesState";
 import { GlobalAnimeProvider } from "./context/GlobalAnimeState";
 import { GlobalBooksProvider } from "./context/GlobalBooksState";
+import { FirstPage } from "./screens/FirstPage";
 
 function App({ location }) {
   //   useEffect(() => {
@@ -25,13 +26,10 @@ function App({ location }) {
   return (
     <div className="container">
       <NavbarComponent />
+      <Route exact path="/">
+        <FirstPage />
+      </Route>
       <Switch>
-        <Route
-          exact
-          path="/movies"
-          render={(routeProps) => <AppMovies {...routeProps} />}
-        />
-
         <Route
           exact
           path="/movies/:listType"

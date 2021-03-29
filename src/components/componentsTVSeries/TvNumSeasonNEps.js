@@ -6,7 +6,7 @@ import TrailerTvSeries from "./TrailerTvSeries";
 
 export const TvNumSeasonNEps = (props) => {
   const [results, setResults] = useState([]);
-
+  console.log(props);
   const { addTvSeriesToWatchList, addTvSeriesToCompleted } = useContext(
     GlobalTvSeriesContext
   );
@@ -56,10 +56,15 @@ export const TvNumSeasonNEps = (props) => {
       sesaons={tvseries.number_of_seasons}
       synopsis={tvseries.overview}
       start_date={
-        tvseries.first_air_date && tvseries.first_air_date.slice(0, 5)
+        tvseries.first_air_date && tvseries.first_air_date.slice(0, 4)
       }
-      end_date={tvseries.last_air_date && tvseries.last_air_date.slice(0, 5)}
+      end_date={tvseries.last_air_date && tvseries.last_air_date.slice(0, 4)}
       listType="add"
+      MovieTVbackground_url={
+        tvseries.backdrop_path !== null
+          ? `https://image.tmdb.org/t/p/w780${tvseries.backdrop_path}`
+          : null
+      }
     >
       <div style={{ marginLeft: "2rem" }}>
         <button

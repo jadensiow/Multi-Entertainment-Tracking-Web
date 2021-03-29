@@ -21,7 +21,7 @@ export const AddManga = () => {
     if (search === "") {
       return null;
     } else {
-      const searchUrl = `https://api.jikan.moe/v3/search/manga?q=${search}&order_by=title&sort=asc&limit=20&rated=g,pg13,pg,r17,r&type=manga,manhwa,oneshot`;
+      const searchUrl = `https://api.jikan.moe/v3/search/manga?q=${search}&order_by=title&sort=asc&limit=10&rated=g,pg13,pg,r17,r&type=manga,manhwa,oneshot`;
       axios.get(searchUrl).then((res) => {
         if (res.data.results.length !== 0) {
           // console.log(res.data.results);
@@ -35,11 +35,11 @@ export const AddManga = () => {
   }, [search]);
 
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Search Manga</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="mangatitle">Search Manga</h1>
 
       <div className="inputManga">
-        <form onSubmit={handleSubmit} className="form-inline mt-4">
+        <form onSubmit={handleSubmit} className="form-inline mt-5">
           <div class="form-group  mb-2">
             <input
               type="text"

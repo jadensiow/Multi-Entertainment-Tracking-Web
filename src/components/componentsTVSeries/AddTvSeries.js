@@ -33,10 +33,10 @@ export const AddTvSeries = () => {
   console.log(results);
 
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Search Tv Series</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="tvseriestitle">Search Tv Series</h1>
       <div className="inputTvSeries">
-        <form onSubmit={handleSubmit} className="form-inline mt-4">
+        <form onSubmit={handleSubmit} className="form-inline mt-5">
           <div class="form-group mb-2">
             <input
               type="text"

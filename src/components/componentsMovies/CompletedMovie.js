@@ -4,12 +4,13 @@ import { ButtonsMovie } from "./ButtonsMovie";
 
 const CompletedMovie = ({ listMovie, type }) => {
   const [search, setSearch] = useState("");
-
+  console.log(listMovie);
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Completed List</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="movietitle">Completed List</h1>
       <input
-        className="mt-4"
+        className="mt-5"
+        placeholder="Search"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
@@ -29,6 +30,11 @@ const CompletedMovie = ({ listMovie, type }) => {
                 comment={movie.comment ? movie.comment : "No Comment Available"}
                 type="movie"
                 userRating={movie.userRating ? movie.userRating : 0}
+                MovieTVbackground_url={
+                  movie.backdrop_path !== null
+                    ? `https://image.tmdb.org/t/p/w780${movie.backdrop_path}`
+                    : null
+                }
               >
                 <div style={{ marginLeft: "2rem" }}>
                   <ButtonsMovie movie={movie} type={type} />

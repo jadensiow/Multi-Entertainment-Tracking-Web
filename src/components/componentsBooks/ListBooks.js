@@ -9,10 +9,10 @@ const ListBooks = ({ listBooks, type }) => {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Watch List</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="bookstitle">Watch List</h1>
       <input
-        className="mt-4"
+        className="mt-5"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />

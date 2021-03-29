@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ButtonsAnime from "./ButtonsAnime";
 import EpisodeNumberUpdater from "../EpisodeNumberUpdater";
-
+import axios from "axios";
 import CardComponent from "../CardComponent";
 
 const ListAnime = ({ listAnime, type }) => {
@@ -10,10 +10,11 @@ const ListAnime = ({ listAnime, type }) => {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="mt-4 ml-3">
-      <h1 className="Title_Text">Watch List</h1>
+    <div className="mt-5 ml-3">
+      <h1 className="animetitle">Watch List</h1>
       <input
-        className="mt-4"
+        className="mt-5"
+        placeholder="Search"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />{" "}
@@ -36,11 +37,14 @@ const ListAnime = ({ listAnime, type }) => {
                 comment={anime.comment ? anime.comment : "No comment available"}
                 listType="watching"
                 userRating={anime.userRating ? anime.userRating : 0}
+                animeManga_url={anime.image2_url ? anime.image2_url : null}
               >
                 <div style={{ paddingLeft: "2rem" }}>
                   <EpisodeNumberUpdater
                     id={anime.mal_id}
-                    totalEpisodes={anime.episodes}
+                    totalEpisodes={
+                      anime.episodes > 0 ? anime.episodes : "Ongoing"
+                    }
                     onEpisodeNumber={
                       anime["episodesWatched"] ? anime["episodesWatched"] : 0
                     }
