@@ -4,7 +4,7 @@ import "../styles/firstpage.css";
 export const FirstPage = () => {
   return (
     <div class="container">
-      <span class="text1">Welcome to </span>
+      <span class="text1">Welcome to the</span>
       <span class="text2">Entertainment</span>
       <span class="text3">Tracker</span>
 
