@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 
 import AddTvSeries from "../components/componentsTVSeries/AddTvSeries";
 import CompletedTvSeries from "../components/componentsTVSeries/CompletedTvSeries";
-import HeaderTvSeries from "../components/componentsTVSeries/HeaderTvSeries";
+import HeaderTvSeries from "../Trash/HeaderTvSeries";
 import ListTvSeries from "../components/componentsTVSeries/ListTvSeries";
 //import RandomTvSeries from "../components/componentsTVSeries/RandomTvSeries";
 
 import { GlobalTvSeriesContext } from "../context/GlobalTvSeriesState";
+import Header from '../components/Header'
+import getLinksAndNames from '../components/Helper/Links'
 
 const AppTvSeries = ({ match }) => {
   const { watchlistOfTvSeries, completedOfTvSeries } = useContext(
@@ -52,6 +54,7 @@ const AppTvSeries = ({ match }) => {
 
     return component;
   };
+  <Header linksAndNames={getLinksAndNames("tvseries")} />
 
   return <div>{componentToRender()}</div>;
 };

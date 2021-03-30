@@ -25,6 +25,8 @@ const CompletedAnime = ({ listAnime, type }) => {
                 start_date={
                   anime.start_date ? anime.start_date.slice(0, 4) : ""
                 }
+                key={anime.mal_id}
+                
                 end_date={anime.end_date ? anime.end_date.slice(0, 4) : ""}
                 episodes={anime.episodes}
                 score={anime.score}
@@ -34,7 +36,7 @@ const CompletedAnime = ({ listAnime, type }) => {
                 userRating={anime.userRating ? anime.userRating : 0}
                 animeManga_url={anime.image2_url ? anime.image2_url : null}
               >
-                <ButtonsAnime anime={anime} type={type} />
+                <ButtonsAnime anime={anime} type={type}  key={anime.mal_id}/>
               </CardComponent>
             )
           );

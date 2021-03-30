@@ -33,6 +33,7 @@ export const ListTvSeries = ({ listTvSeries, type }) => {
                 sesaons={
                   tvseries.number_of_seasons ? tvseries.number_of_seasons : ""
                 }
+                key={tvseries.id}
                 synopsis={tvseries.overview}
                 start_date={
                   tvseries.first_air_date
@@ -61,6 +62,7 @@ export const ListTvSeries = ({ listTvSeries, type }) => {
                   <EpisodeNumberUpdater
                     id={tvseries.id}
                     totalEpisodes={tvseries.number_of_episodes}
+                    key={tvseries.id}
                     onEpisodeNumber={
                       tvseries["episodesWatched"]
                         ? tvseries["episodesWatched"]

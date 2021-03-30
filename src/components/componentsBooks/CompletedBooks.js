@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AppBooksReducer from "../../context/AppBooksReducer";
 import CardComponent from "../CardComponent";
 import ButtonsBooks from "./ButtonsBooks";
 
@@ -32,9 +33,10 @@ export const CompletedBooks = ({ listBooks, type }) => {
                 comment={book.comment ? book.comment : "No Comment Available"}
                 type="book"
                 userRating={book.userRating ? book.userRating : 0}
+                key={books.id}
               >
                 <div style={{ marginLeft: "2rem" }}>
-                  <ButtonsBooks books={books} type={type} />
+                  <ButtonsBooks books={books} type={type} key={books.id} />
                 </div>
               </CardComponent>
             )

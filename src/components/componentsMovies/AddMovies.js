@@ -54,8 +54,8 @@ export const AddMovies = () => {
       {results.length > 0 ? (
         <ul className="results">
           {results.map((movie) => (
-            <li key={movie.id}>
-              <ResultCardMovies movie={movie} type={watchlistOfMovie} />
+            <li >
+              <ResultCardMovies movie={movie} type={watchlistOfMovie} key={movie.id} />
             </li>
           ))}
         </ul>

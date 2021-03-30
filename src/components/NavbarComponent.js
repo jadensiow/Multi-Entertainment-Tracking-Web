@@ -1,11 +1,7 @@
-import React from "react";
-import { Link, withRouter, useState } from "react-router-dom";
-import DropdownMenu from "react-bootstrap/DropdownMenu";
+import React, {useState} from "react";
+import { withRouter } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
-import DropdownToggle from "react-bootstrap/DropdownToggle";
-import DropdownItem from "react-bootstrap/DropdownItem";
-import NavLink from "react-bootstrap/NavLink";
-import NavbarBrand from "react-bootstrap/NavbarBrand";
+
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
@@ -14,6 +10,46 @@ import Col from "react-bootstrap/Col";
 import "../styles/NavbarComponentStyles.css";
 
 const NavbarComponent = () => {
+
+  const [show, setShow] = useState(false);
+const showDropdown = (e)=>{
+    setShow(!show);
+}
+const hideDropdown = (e) => {
+    setShow(false);
+}
+
+const [showMovies, setShowMovies] = useState(false);
+const showDropdownMovies = (e)=>{
+  setShowMovies(!show);
+}
+const hideDropdownMovies = (e) => {
+  setShowMovies(false);
+}
+
+const [showTvseries, setShowTvseries] = useState(false);
+const showDropdownTvseries = (e)=>{
+  setShowTvseries(!show);
+}
+const hideDropdownTvseries = (e) => {
+  setShowTvseries(false);
+}
+
+const [showManga, setShowManga] = useState(false);
+const showDropdownManga = (e)=>{
+  setShowManga(!show);
+}
+const hideDropdownManga = (e) => {
+  setShowManga(false);
+}
+
+const [showBooks, setShowBooks] = useState(false);
+const showDropdownBooks = (e)=>{
+  setShowBooks(!show);
+}
+const hideDropdownBooks = (e) => {
+  setShowBooks(false);
+}
   return (
     <div className="container-new">
       <Row>
@@ -27,7 +63,10 @@ const NavbarComponent = () => {
 
           <Nav className="mr-auto">
             <Col>
-              <NavDropdown title="Anime" id="navbar-inner">
+              <NavDropdown title="Anime" id="navbar-inner"
+               show={show}
+               onMouseEnter={showDropdown} 
+               onMouseLeave={hideDropdown} >
                 <NavDropdown.Item href="/anime/watchlist">
                   Watch List
                 </NavDropdown.Item>
@@ -40,7 +79,10 @@ const NavbarComponent = () => {
               </NavDropdown>
             </Col>
             <Col>
-              <NavDropdown title="Movies" id="navbar-inner2">
+              <NavDropdown title="Movies" id="navbar-inner2"
+        show={showMovies} onMouseEnter={showDropdownMovies} 
+        onMouseLeave={hideDropdownMovies}
+         >
                 <NavDropdown.Item href="/movies/watchlist">
                   Watch List
                 </NavDropdown.Item>
@@ -53,7 +95,9 @@ const NavbarComponent = () => {
               </NavDropdown>
             </Col>
             <Col>
-              <NavDropdown title="Tv Series" id="navbar-inner3">
+              <NavDropdown title="Tv Series" id="navbar-inner3"
+               show={showTvseries} onMouseEnter={showDropdownTvseries} 
+               onMouseLeave={hideDropdownTvseries}  >
                 <NavDropdown.Item href="/tvseries/watchlist">
                   Watch List
                 </NavDropdown.Item>
@@ -66,7 +110,8 @@ const NavbarComponent = () => {
               </NavDropdown>
             </Col>
             <Col>
-              <NavDropdown title="Manga" id="navbar-inner4">
+              <NavDropdown title="Manga" id="navbar-inner4" show={showManga} onMouseEnter={showDropdownManga} 
+               onMouseLeave={hideDropdownManga}>
                 <NavDropdown.Item href="/manga/watchlist">
                   Watch List
                 </NavDropdown.Item>
@@ -79,7 +124,8 @@ const NavbarComponent = () => {
               </NavDropdown>
             </Col>
             <Col>
-              <NavDropdown title="Books" id="navbar-inner5">
+              <NavDropdown title="Books" id="navbar-inner5" show={showBooks} onMouseEnter={showDropdownBooks} 
+               onMouseLeave={hideDropdownBooks} >
                 <NavDropdown.Item href="/books/watchlist">
                   Watch List
                 </NavDropdown.Item>

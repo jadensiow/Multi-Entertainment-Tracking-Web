@@ -29,13 +29,14 @@ const CompletedManga = ({ listManga, type }) => {
                 episodes={manga.chapters}
                 score={manga.score}
                 synopsis={manga.synopsis}
+                key={manga.mal_id}
                 type="manga"
                 comment={manga.comment ? manga.comment : "No comment available"}
                 listType="completed"
                 userRating={manga.userRating ? manga.userRating : 0}
                 animeManga_url={manga.image2_url ? manga.image2_url : null}
               >
-                <ButtonsManga manga={manga} type={type} />
+                <ButtonsManga manga={manga} type={type} key={manga.mal_id} />
               </CardComponent>
             )
           );

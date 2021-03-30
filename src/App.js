@@ -1,4 +1,3 @@
-import gradient from "./gradients";
 import "./styles/index.css";
 
 import AppMovies from "./screens/AppMovies";
@@ -15,13 +14,10 @@ import { GlobalTvSeriesProvider } from "./context/GlobalTvSeriesState";
 import { GlobalAnimeProvider } from "./context/GlobalAnimeState";
 import { GlobalBooksProvider } from "./context/GlobalBooksState";
 import { FirstPage } from "./screens/FirstPage";
+import ScrollToTop from "./components/Helper/ScrollToTop";
 
-function App({ location }) {
-  //   useEffect(() => {
-  //     document.body.style.backgroundImage =
-  //       gradient[Math.floor(Math.random() * gradient.length)];
-  //     document.body.style.objectFit = "cover";
-  //   }, [location]);
+function App() {
+  
 
   return (
     <div className="container">
@@ -68,6 +64,7 @@ function App({ location }) {
           render={(routeProps) => (
             <GlobalTvSeriesProvider>
               <AppTvSeries {...routeProps} />
+              <ScrollToTop/>
             </GlobalTvSeriesProvider>
           )}
         />
@@ -103,6 +100,7 @@ function App({ location }) {
           )}
         />
       </Switch>
+    
     </div>
   );
 }

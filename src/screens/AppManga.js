@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 
 import AddManga from "../components/componentsManga/AddManga";
 import CompletedManga from "../components/componentsManga/CompletedManga";
-import HeaderManga from "../components/componentsManga/HeaderManga";
+import HeaderManga from "../Trash/HeaderManga";
 import ListManga from "../components/componentsManga/ListManga";
 //import RandomManga from "../components/componentsManga/RandomManga";
+import Header from '../components/Header'
+import getLinksAndNames from '../components/Helper/Links'
 
 import { GlobalMangaContext } from "../context/GlobalMangaState";
 
@@ -50,6 +52,7 @@ function AppManga({ match }) {
 
     return component;
   };
+  <Header linksAndNames={getLinksAndNames("manga")} />
 
   return <div>{componentToRender()}</div>;
 }

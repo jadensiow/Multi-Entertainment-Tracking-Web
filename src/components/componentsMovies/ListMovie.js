@@ -28,6 +28,7 @@ const ListMovie = ({ listMovie, type }) => {
                 start_date={movie.release_date}
                 movie
                 id={movie.id}
+                key={movie.id}
                 listType="watching"
                 comment={movie.comment ? movie.comment : "No Comment Available"}
                 type="movie"
@@ -39,7 +40,7 @@ const ListMovie = ({ listMovie, type }) => {
                 }
               >
                 <div style={{ marginLeft: "2rem" }}>
-                  <ButtonsMovie movie={movie} type={type} />
+                  <ButtonsMovie movie={movie} type={type} key={movie.id}/>
                 </div>
               </CardComponent>
             )

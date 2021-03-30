@@ -30,6 +30,7 @@ const CompletedTvSeries = ({ listTvSeries, type }) => {
                 end_date={tvseries.last_air_date.slice(0, 5)}
                 id={tvseries.id}
                 type="tvseries"
+                key={tvseries.id}
                 comment={
                   tvseries.comment ? tvseries.comment : "No comment available"
                 }
@@ -42,7 +43,7 @@ const CompletedTvSeries = ({ listTvSeries, type }) => {
                 }
               >
                 <div style={{ marginLeft: "2rem" }}>
-                  <ButtonsTvSeries tvseries={tvseries} type={type} />
+                  <ButtonsTvSeries tvseries={tvseries} type={type} key={tvseries.id}/>
                 </div>
               </CardComponent>
             )

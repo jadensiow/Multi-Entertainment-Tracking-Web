@@ -32,6 +32,7 @@ const ListManga = ({ listManga, type }) => {
                 score={manga.score}
                 synopsis={manga.synopsis}
                 type="manga"
+                key={manga.mal_id}
                 comment={manga.comment ? manga.comment : "No comment available"}
                 listType="watching"
                 userRating={manga.userRating ? manga.userRating : 0}

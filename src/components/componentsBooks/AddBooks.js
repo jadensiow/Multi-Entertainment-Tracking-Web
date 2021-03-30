@@ -55,8 +55,8 @@ export const AddBooks = () => {
       {results.length > 0 ? (
         <ul className="results">
           {results.map((books) => (
-            <li key={books.id}>
-              <ResultCardBooks books={books} type={GlobalBooksContext} />
+            <li >
+              <ResultCardBooks books={books} type={GlobalBooksContext} key={books.id}/>
             </li>
           ))}
         </ul>

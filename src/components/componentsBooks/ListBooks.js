@@ -36,10 +36,12 @@ const ListBooks = ({ listBooks, type }) => {
                 comment={book.comment ? book.comment : "No Comment Available"}
                 type="book"
                 userRating={book.userRating ? book.userRating : 0}
+                key={books.id}
               >
                 <div style={{ marginLeft: "2rem" }}>
                   <EpisodeNumberUpdater
                     id={books.id}
+                    key={books.id}
                     totalEpisodes={books.volumeInfo.pageCount}
                     onEpisodeNumber={
                       books["episodesWatched"] ? books["episodesWatched"] : 0

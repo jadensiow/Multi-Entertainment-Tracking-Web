@@ -73,19 +73,3 @@ export const ResultCardChildAnime = (props) => {
   );
 };
 
-/*
-
-newObj = { ...props.anime, image2_url: result };
-  const [result, setResults] = useState("");
-  console.log(props.anime.mal_id);
-  let newObj;
-  useEffect(() => {
-    const searchUrl = `https://api.jikan.moe/v3/anime/${props.anime.mal_id}/pictures`;
-    axios.get(searchUrl).then((res) => {
-      if (res.data.pictures) {
-        console.log(res.data.pictures);
-        setResults(res.data.pictures[0].large);
-      }
-    });
-  }, []);
-  console.log(newObj);*/

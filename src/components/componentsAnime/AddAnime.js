@@ -57,8 +57,8 @@ export const AddAnime = () => {
       {results.length > 0 ? (
         <ul className="results">
           {results.map((anime) => (
-            <li key={anime.mal_id}>
-              <ResultCardAnime anime={anime} type={watchlistOfAnime} />
+            <li >
+              <ResultCardAnime anime={anime} type={watchlistOfAnime} key={anime.mal_id}/>
             </li>
           ))}
         </ul>

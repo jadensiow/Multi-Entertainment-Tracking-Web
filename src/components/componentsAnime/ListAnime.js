@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ButtonsAnime from "./ButtonsAnime";
 import EpisodeNumberUpdater from "../EpisodeNumberUpdater";
-import axios from "axios";
 import CardComponent from "../CardComponent";
 
 const ListAnime = ({ listAnime, type }) => {
@@ -29,6 +28,7 @@ const ListAnime = ({ listAnime, type }) => {
                 start_date={
                   anime.start_date ? anime.start_date.slice(0, 4) : ""
                 }
+                key={anime.mal_id}
                 end_date={anime.end_date ? anime.end_date.slice(0, 4) : ""}
                 episodes={anime.episodes}
                 score={anime.score}
@@ -42,6 +42,7 @@ const ListAnime = ({ listAnime, type }) => {
                 <div style={{ paddingLeft: "2rem" }}>
                   <EpisodeNumberUpdater
                     id={anime.mal_id}
+                    key={anime.mal_id}
                     totalEpisodes={
                       anime.episodes > 0 ? anime.episodes : "Ongoing"
                     }

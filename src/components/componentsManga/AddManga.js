@@ -56,8 +56,8 @@ export const AddManga = () => {
       {results.length > 0 ? (
         <ul className="results">
           {results.map((manga) => (
-            <li key={manga.mal_id}>
-              <ResultCardManga manga={manga} type={watchlistOfManga} />
+            <li >
+              <ResultCardManga manga={manga} type={watchlistOfManga} key={manga.mal_id} />
             </li>
           ))}
         </ul>

@@ -53,8 +53,8 @@ export const AddTvSeries = () => {
       {results.length > 0 ? (
         <ul className="results">
           {results.map((tvseries) => (
-            <li key={tvseries.id}>
-              <ResultCardTvSeries tvseries={tvseries} />
+            <li >
+              <ResultCardTvSeries tvseries={tvseries} key={tvseries.id}/>
             </li>
           ))}
         </ul>

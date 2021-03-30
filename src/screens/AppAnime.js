@@ -1,20 +1,20 @@
 import React, { useContext } from "react";
 
 import AddAnime from "../components/componentsAnime/AddAnime";
-import HeaderAnime from "../components/componentsAnime/HeaderAnime";
 import ListAnime from "../components/componentsAnime/ListAnime";
 //import RandomAnime from "../components/componentsAnime/RandomAnime";
 import CompletedAnime from "../components/componentsAnime/CompletedAnime";
-
+import Header from '../components/Header'
 import { GlobalAnimeContext } from "../context/GlobalAnimeState";
+import getLinksAndNames from '../components/Helper/Links'
+import ScrollToTop from "../components/Helper/ScrollToTop";
 
 function AppAnime({ match }) {
   const { watchlistOfAnime, completedOfAnime } = useContext(GlobalAnimeContext);
 
   const componentToRender = () => {
     let component;
-    let compProcess; // to pass it down to button so can choose at watchlist or completed
-
+    let compProcess; 
     switch (match.params.listType) {
       case "watchlist":
         component = (
@@ -50,8 +50,11 @@ function AppAnime({ match }) {
 
     return component;
   };
+  <Header linksAndNames={getLinksAndNames("anime")} />
 
-  return <div>{componentToRender()}</div>;
+  return <div>{componentToRender()}
+  <ScrollToTop/>
+  </div>;
 }
 
 export default AppAnime;
