@@ -9,9 +9,11 @@
   width: 100%;
   margin-top: 150px;
 
-  color: rgb(0, 47, 255);
+  color: rgb(238, 121, 92);
   font-size: 40px;
   font-weight: 700;
+  font-family: "Trocchi";
+
   letter-spacing: 8px;
   margin-bottom: 20px;
   background: rgb(169, 182, 216);
@@ -24,13 +26,17 @@
   text-align: center;
   position: absolute;
   top: 50%;
+
+  font-family: "Trocchi";
+
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   margin-top: 50px;
 
-  color: rgb(0, 47, 255);
+  color: rgb(238, 121, 92);
   font-size: 40px;
+
   font-weight: 700;
   letter-spacing: 8px;
   margin-bottom: 20px;
@@ -44,12 +50,14 @@
   text-align: center;
   position: absolute;
   top: 50%;
+  font-family: "Trocchi";
+
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   margin-top: 50px;
 
-  color: rgb(0, 47, 255);
+  color: rgb(238, 121, 92);
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 8px;
@@ -61,7 +69,19 @@
 .text4 {
   display: block;
   font-size: 40px;
+  font-family: "Trocchi";
   color: #ff0404;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bolder;
+}
+
+.text5 {
+  display: block;
+  font-size: 30px;
+  color: #470303;
+  font-family: "Trocchi";
+
   text-align: center;
   margin-top: 50px;
   font-weight: bolder;
