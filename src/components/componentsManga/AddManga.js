@@ -17,7 +17,6 @@ export const AddManga = () => {
   };
 
   useEffect(() => {
-    // need if as the data cant be read since [0] cause a lot of errors
     if (search === "") {
       return null;
     } else {
@@ -56,8 +55,12 @@ export const AddManga = () => {
       {results.length > 0 ? (
         <ul className="results">
           {results.map((manga) => (
-            <li >
-              <ResultCardManga manga={manga} type={watchlistOfManga} key={manga.mal_id} />
+            <li>
+              <ResultCardManga
+                manga={manga}
+                type={watchlistOfManga}
+                key={manga.mal_id}
+              />
             </li>
           ))}
         </ul>

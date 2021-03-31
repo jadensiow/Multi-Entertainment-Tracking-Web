@@ -40,12 +40,7 @@ const AppAnimeReducer = (state, action) => {
       const { mal_id, episodes } = action.payload;
 
       /* 
-            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            map over the watchlistOfAnime as episodes can only be updated if a users is still
-            watching the anime. For each anime check if it's id is equal to the id of the 
-            anime we want to edit and set 'episodesWatched' property on it. 
-            We can't do anime.episodesWatched = episodes as the anime object may not have the 
-            property 'episodesWatched'
+            Each anime match with id and set  'episodesWatched' to it. cannot do anime.episodeswatch as anime might not have it the property
             */
       const newList = state.watchlistOfAnime.map((anime) => {
         if (anime.mal_id === mal_id) {

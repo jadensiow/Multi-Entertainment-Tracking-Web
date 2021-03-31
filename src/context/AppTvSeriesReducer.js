@@ -37,10 +37,6 @@ const AppTvSeriesReducer = (state, action) => {
       };
 
     case "UPDATE_WATCHED_TV_SERIES_EPISODES": {
-      // @@@@@@@@@@@@@@@@@@@@@
-      // I've put curly braces around this and the next case to avoid
-      // variable scoping issues
-
       const { id, watchedEpisodes } = action.payload;
 
       const newList = state.watchlistOfTvSeries.map((tv) => {

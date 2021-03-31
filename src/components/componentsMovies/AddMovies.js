@@ -24,7 +24,7 @@ export const AddMovies = () => {
       axios.get(searchUrl).then((res) => {
         if (res.data.results.length !== 0) {
           //	console.log("searching");
-          //console.log(res.data.results);
+          console.log(res.data);
           setResults(res.data.results);
         } else {
           setResults([]);
@@ -54,8 +54,12 @@ export const AddMovies = () => {
       {results.length > 0 ? (
         <ul className="results">
           {results.map((movie) => (
-            <li >
-              <ResultCardMovies movie={movie} type={watchlistOfMovie} key={movie.id} />
+            <li>
+              <ResultCardMovies
+                movie={movie}
+                type={watchlistOfMovie}
+                key={movie.id}
+              />
             </li>
           ))}
         </ul>

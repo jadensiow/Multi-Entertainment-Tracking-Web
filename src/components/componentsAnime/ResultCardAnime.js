@@ -17,9 +17,7 @@ export const ResultCardAnime = (props) => {
   }, []);
   return (
     <div className="result-card">
-      {result && (
-        <ResultCardChildAnime anime={props.anime} imageTwoUrl={result} />
-      )}
+      <ResultCardChildAnime anime={props.anime} imageTwoUrl={result} />
     </div>
   );
 };

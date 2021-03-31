@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 
 import AddMovies from "../components/componentsMovies/AddMovies";
 import CompletedMovie from "../components/componentsMovies/CompletedMovie";
-import HeaderMovies from "../Trash/HeaderMovies";
+//import HeaderMovies from "../Trash/HeaderMovies";
 import ListMovie from "../components/componentsMovies/ListMovie";
 //import RandomMovie from "../components/componentsMovies/RandomMovie";
-import Header from '../components/Header'
+import Header from "../components/Header";
 
 import { GlobalMovieContext } from "../context/GlobalMovieState";
-import getLinksAndNames from '../components/Helper/Links'
+import getLinksAndNames from "../components/Helper/Links";
 
 const AppMovies = ({ match }) => {
   const { completedOfMovie, watchlistOfMovie } = useContext(GlobalMovieContext);
@@ -51,7 +51,7 @@ const AppMovies = ({ match }) => {
 
     return component;
   };
-  <Header linksAndNames={getLinksAndNames("movies")} />
+  <Header linksAndNames={getLinksAndNames("movies")} />;
 
   return <div>{componentToRender()}</div>;
 };

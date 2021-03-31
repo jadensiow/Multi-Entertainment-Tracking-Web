@@ -19,7 +19,11 @@ const CompletedMovie = ({ listMovie, type }) => {
           return (
             movie.title.toLowerCase().includes(search.toLowerCase()) && (
               <CardComponent
-                image_url={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                image_url={
+                  movie.poster_path !== null
+                    ? `https://image.tmdb.org/t/p/w200${movie.poster_path}`
+                    : `${window.location.origin}/noimage.png`
+                }
                 title={movie.title}
                 score={movie.vote_average}
                 synopsis={movie.overview}

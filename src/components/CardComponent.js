@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "../card.css";
+import "../styles/card.css";
 
 import ReactCardFlip from "react-card-flip";
 import StarHollowSVG from "./StarHollowSVG";
@@ -20,7 +20,7 @@ const CardComponent = ({
   score,
   synopsis,
   tvseries,
-  sesaons,
+  sesaons: seasons,
   movie,
   book,
   type,
@@ -155,9 +155,9 @@ const CardComponent = ({
               {tvseries && (
                 <span className="minutes">
                   Seasons:{" "}
-                  {sesaons
-                    ? sesaons
-                    : sesaons === 0
+                  {seasons
+                    ? seasons
+                    : seasons === 0
                     ? "Ongoing"
                     : "Data unavailable"}
                 </span>
@@ -246,22 +246,14 @@ const CardComponent = ({
               <p>
                 {Array(10)
                   .fill(0)
+                  // form array of [1 to 10] then
+
                   .map((n, i) => i + 1)
                   .map((num) => {
                     let fill = false;
-
+                    // if num hovering over star 8 will fill all star 8 and less.
+                    // same for click
                     if (num <= hoveringStar || num <= clickedStar) {
-                      // if the number of star is less than the star we're hoveringOver
-                      // then we want to fill all stars that have a number lower than the
-                      // current star that we're hovering over
-
-                      /* 
-                        so if we're hovering over star number 5, then fill all stars
-                        that have number less than equal to 5. Same thing applies to any
-                        star we click on. But the click is permanent as it sends an action
-                        to the context 
-                        */
-
                       fill = true;
                     }
 

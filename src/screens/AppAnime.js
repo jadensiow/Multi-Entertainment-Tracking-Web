@@ -4,17 +4,16 @@ import AddAnime from "../components/componentsAnime/AddAnime";
 import ListAnime from "../components/componentsAnime/ListAnime";
 //import RandomAnime from "../components/componentsAnime/RandomAnime";
 import CompletedAnime from "../components/componentsAnime/CompletedAnime";
-import Header from '../components/Header'
+import Header from "../components/Header";
 import { GlobalAnimeContext } from "../context/GlobalAnimeState";
-import getLinksAndNames from '../components/Helper/Links'
-import ScrollToTop from "../components/Helper/ScrollToTop";
+import getLinksAndNames from "../components/Helper/Links";
 
 function AppAnime({ match }) {
   const { watchlistOfAnime, completedOfAnime } = useContext(GlobalAnimeContext);
 
   const componentToRender = () => {
     let component;
-    let compProcess; 
+    let compProcess;
     switch (match.params.listType) {
       case "watchlist":
         component = (
@@ -50,11 +49,9 @@ function AppAnime({ match }) {
 
     return component;
   };
-  <Header linksAndNames={getLinksAndNames("anime")} />
+  <Header linksAndNames={getLinksAndNames("anime")} />;
 
-  return <div>{componentToRender()}
-  <ScrollToTop/>
-  </div>;
+  return <div>{componentToRender()}</div>;
 }
 
 export default AppAnime;

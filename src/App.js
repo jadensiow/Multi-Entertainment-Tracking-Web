@@ -14,13 +14,12 @@ import { GlobalTvSeriesProvider } from "./context/GlobalTvSeriesState";
 import { GlobalAnimeProvider } from "./context/GlobalAnimeState";
 import { GlobalBooksProvider } from "./context/GlobalBooksState";
 import { FirstPage } from "./screens/FirstPage";
-import ScrollToTop from "./components/Helper/ScrollToTop";
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
-  
-
   return (
     <div className="container">
+      <ScrollToTop smooth color="black" />
       <NavbarComponent />
       <Route exact path="/">
         <FirstPage />
@@ -64,7 +63,7 @@ function App() {
           render={(routeProps) => (
             <GlobalTvSeriesProvider>
               <AppTvSeries {...routeProps} />
-              <ScrollToTop/>
+              <ScrollToTop />
             </GlobalTvSeriesProvider>
           )}
         />
@@ -100,7 +99,6 @@ function App() {
           )}
         />
       </Switch>
-    
     </div>
   );
 }

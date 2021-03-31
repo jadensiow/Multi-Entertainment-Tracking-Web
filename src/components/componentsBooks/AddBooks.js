@@ -15,7 +15,6 @@ export const AddBooks = () => {
   };
 
   useEffect(() => {
-    // need if as the data cant be read since [0] cause a lot of errors
     if (search === "") {
       return null;
     } else {
@@ -55,8 +54,12 @@ export const AddBooks = () => {
       {results.length > 0 ? (
         <ul className="results">
           {results.map((books) => (
-            <li >
-              <ResultCardBooks books={books} type={GlobalBooksContext} key={books.id}/>
+            <li>
+              <ResultCardBooks
+                books={books}
+                type={GlobalBooksContext}
+                key={books.id}
+              />
             </li>
           ))}
         </ul>

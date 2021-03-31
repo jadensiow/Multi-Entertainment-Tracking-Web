@@ -41,8 +41,8 @@ export const TrailerTvSeries = (props) => {
         Close
       </button>
       <iframe
-        width="560"
-        height="315"
+        width="600"
+        height="350"
         src={`https://www.youtube.com/embed/${results}?rel=0`}
         frameborder="0"
         allow="encrypted-media"

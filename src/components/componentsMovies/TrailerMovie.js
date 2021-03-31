@@ -4,8 +4,6 @@ import axios from "axios";
 export const TrailerMovie = (props) => {
   //console.log(props.movie);
 
-  //AIzaSyD3wEZ8-YIeLR747RyCYclfDBOzjBnk6hs limit
-
   let search = `${props.movie.title}`;
   let yearOfrelease = props.movie.release_date
     ? props.movie.release_date.slice(0, 4)
@@ -39,8 +37,8 @@ export const TrailerMovie = (props) => {
         Close
       </button>
       <iframe
-        width="560"
-        height="315"
+        width="600"
+        height="350"
         src={`https://www.youtube.com/embed/${results}?rel=0`}
         frameborder="0"
         allow="encrypted-media"

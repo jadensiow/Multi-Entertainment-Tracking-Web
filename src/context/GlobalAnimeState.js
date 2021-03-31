@@ -46,11 +46,6 @@ export const GlobalAnimeProvider = (props) => {
     dispatch({ type: "REMOVE_ANIME_FROM_COMPLETED", payload: mal_id });
   };
 
-  /* 
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    Action to update anime episodes, simply gets the anime id (mal_id) and the 
-    episode number to set (episodes) and send a dispatch to the reducer
-    */
   const updateWatchedAnimeEpisodes = (mal_id, episodes) => {
     dispatch({
       type: "UPDATE_WATCHED_ANIME_EPISODES",

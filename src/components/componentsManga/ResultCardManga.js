@@ -17,9 +17,7 @@ export const ResultCardManga = (props) => {
 
   return (
     <div className="result-card">
-      {result && (
-        <ResultCardMangaChild manga={props.manga} imageTwoUrl={result} />
-      )}
+      <ResultCardMangaChild manga={props.manga} imageTwoUrl={result} />
     </div>
   );
 };

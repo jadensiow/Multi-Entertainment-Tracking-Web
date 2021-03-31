@@ -1,8 +1,7 @@
 import CardComponent from "../CardComponent";
 import EpisodeNumberUpdater from "../EpisodeNumberUpdater";
 import { ButtonsTvSeries } from "./ButtonsTvSeries";
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 
 export const ListTvSeries = ({ listTvSeries, type }) => {
   const [search, setSearch] = useState("");
@@ -26,7 +25,11 @@ export const ListTvSeries = ({ listTvSeries, type }) => {
             tvseries.name.toLowerCase().includes(search.toLowerCase()) && (
               <CardComponent
                 tvseries
-                image_url={`https://image.tmdb.org/t/p/w200${tvseries.poster_path}`}
+                image_url={
+                  tvseries.poster_path !== null
+                    ? `https://image.tmdb.org/t/p/w200${tvseries.poster_path}`
+                    : `${window.location.origin}/noimage.png`
+                }
                 title={tvseries.name}
                 score={tvseries.vote_average ? tvseries.vote_average : ""}
                 episodes={tvseries.number_of_episodes}

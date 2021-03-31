@@ -20,14 +20,18 @@ const CompletedTvSeries = ({ listTvSeries, type }) => {
             tvseries.name.toLowerCase().includes(search.toLowerCase()) && (
               <CardComponent
                 tvseries
-                image_url={`https://image.tmdb.org/t/p/w200${tvseries.poster_path}`}
+                image_url={
+                  tvseries.poster_path !== null
+                    ? `https://image.tmdb.org/t/p/w200${tvseries.poster_path}`
+                    : `${window.location.origin}/noimage.png`
+                }
                 title={tvseries.name}
                 score={tvseries.vote_average}
                 episodes={tvseries.number_of_episodes}
                 sesaons={tvseries.number_of_seasons}
                 synopsis={tvseries.overview}
-                start_date={tvseries.first_air_date.slice(0, 5)}
-                end_date={tvseries.last_air_date.slice(0, 5)}
+                start_date={tvseries.first_air_date.slice(0, 4)}
+                end_date={tvseries.last_air_date.slice(0, 4)}
                 id={tvseries.id}
                 type="tvseries"
                 key={tvseries.id}
@@ -43,7 +47,11 @@ const CompletedTvSeries = ({ listTvSeries, type }) => {
                 }
               >
                 <div style={{ marginLeft: "2rem" }}>
-                  <ButtonsTvSeries tvseries={tvseries} type={type} key={tvseries.id}/>
+                  <ButtonsTvSeries
+                    tvseries={tvseries}
+                    type={type}
+                    key={tvseries.id}
+                  />
                 </div>
               </CardComponent>
             )

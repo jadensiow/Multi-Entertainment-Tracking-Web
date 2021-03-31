@@ -28,9 +28,9 @@ export const TvNumSeasonNEps = (props) => {
   const [showTrailer, setShowTrailer] = useState(false);
 
   useEffect(() => {
-    const apiKey = "c9c0a853f79f8d3486e8739f0454d09b";
+    const { REACT_APP_TMDB_KEY } = process.env;
     {
-      const searchUrl = `https://api.themoviedb.org/3/tv/${props.tvseries.id}?api_key=${apiKey}&language=en-US`;
+      const searchUrl = `https://api.themoviedb.org/3/tv/${props.tvseries.id}?api_key=${REACT_APP_TMDB_KEY}&language=en-US`;
       axios.get(searchUrl).then((res) => {
         // console.log(res);
 
@@ -49,7 +49,11 @@ export const TvNumSeasonNEps = (props) => {
   return (
     <CardComponent
       tvseries
-      image_url={`https://image.tmdb.org/t/p/w200${tvseries.poster_path}`}
+      image_url={
+        tvseries.poster_path !== null
+          ? `https://image.tmdb.org/t/p/w200${tvseries.poster_path}`
+          : `${window.location.origin}/noimage.png`
+      }
       title={tvseries.name}
       score={tvseries.vote_average}
       episodes={tvseries.number_of_episodes}
