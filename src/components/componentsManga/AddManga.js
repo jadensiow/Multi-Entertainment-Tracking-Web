@@ -69,12 +69,3 @@ export const AddManga = () => {
   );
 };
 export default AddManga;
-
-/*
-   <input
-          type="text"
-          placeholder="Manga Search"
-          value={search}
-          onChange={searchType}
-        ></input>
-*/

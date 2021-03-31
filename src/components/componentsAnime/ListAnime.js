@@ -13,7 +13,7 @@ const ListAnime = ({ listAnime, type }) => {
       <h1 className="animetitle">Watch List</h1>
       <input
         className="mt-5"
-        placeholder="Search"
+        placeholder="Search Watch List"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />{" "}

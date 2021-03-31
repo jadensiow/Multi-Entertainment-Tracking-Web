@@ -15,7 +15,7 @@ export const ListTvSeries = ({ listTvSeries, type }) => {
       <h1 className="tvseriestitle">Watch List</h1>
       <input
         className="mt-5"
-        placeholder="Search"
+        placeholder="Search Watch List"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />

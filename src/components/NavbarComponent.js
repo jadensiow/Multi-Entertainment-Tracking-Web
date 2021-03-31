@@ -93,7 +93,7 @@ const NavbarComponent = () => {
                   Watch List
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/movies/completed">
-                  Comepleted Movies
+                  Completed Movies
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/movies/add">
                   Search Movies
@@ -112,7 +112,7 @@ const NavbarComponent = () => {
                   Watch List
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/tvseries/completed">
-                  Comepleted Tv Series
+                  Completed Tv Series
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/tvseries/add">
                   Search Tv Series
@@ -131,7 +131,7 @@ const NavbarComponent = () => {
                   Watch List
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/manga/completed">
-                  Comepleted Manga
+                  Completed Manga
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/manga/add">
                   Search Manga
@@ -150,7 +150,7 @@ const NavbarComponent = () => {
                   Watch List
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/books/completed">
-                  Comepleted Books
+                  Completed Books
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/books/add">
                   Search Books

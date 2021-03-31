@@ -10,7 +10,7 @@ const CompletedManga = ({ listManga, type }) => {
       <h1 className="mangatitle">Completed List</h1>
       <input
         className="mt-5"
-        placeholder="Search"
+        placeholder="Search Completed List"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
