@@ -12,6 +12,7 @@ export const CompletedBooks = ({ listBooks, type }) => {
       <input
         className="mt-5"
         value={search}
+        placeholder="Search Completed List"
         onChange={(e) => setSearch(e.target.value)}
       />
       <div>
