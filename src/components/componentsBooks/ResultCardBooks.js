@@ -3,7 +3,7 @@ import { GlobalBooksContext } from "../../context/GlobalBooksState";
 import CardComponent from "../CardComponent";
 
 export const ResultCardBooks = (props) => {
-  //console.log(props.books);
+  console.log(props.books);
   // store to globalprovider hooks
   const {
     addBooksToWatchList,
