@@ -6,9 +6,12 @@ A personal tracker for books, tvseries, movies, anime and manga. The site allow 
 
 ### Features
 
-- When searching for shows, users are able to watch the trailers first to check if it interest them.
 - Users are able to input which episode the user has completed or indicate which platform they used to watch it on.
+![Animation3](https://user-images.githubusercontent.com/78722564/118399568-60c4fb00-b690-11eb-9e7c-7f1c6ccacf94.gif)
+
+- When searching for shows, users are able to watch the trailers first to check if it interest them.
 - Users are able to leave their own reviews and comments on the shows.
+![Animation5 (1)](https://user-images.githubusercontent.com/78722564/118399639-b39eb280-b690-11eb-9cc7-3765167cb464.gif)
 
 ## Technologies used
 
