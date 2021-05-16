@@ -15,7 +15,7 @@ A personal tracker for books, tvseries, movies, anime and manga. The site allow 
 
 ## Technologies used
 
-ReactJS, React hooks and NodeJS
+ReactJS, React hooks and NodeJS  
 API used: Jikan, TMDB and youtube APIs
 
 ## Install
