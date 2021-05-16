@@ -1,5 +1,7 @@
 # Multi-Entertainment Tracking Web
 
+https://multi-entertainment-tracker-op8e8w9fe-jadensiow.vercel.app/
+
 ## Description
 
 A personal tracker for books, tvseries, movies, anime and manga. The site allow users to add list of completed and ongoing shows they are watching. Such that users do not log in to multiple platform to check what shows they are left with. A better overview of everything.
